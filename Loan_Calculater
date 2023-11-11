@@ -1,0 +1,49 @@
+interest_rate_year = input("Enter the interest rate: ")
+number_years = input("enter the number of years: ")
+loan_amount = input("Enter the loan amount: ")
+
+interest_rate_month = float(interest_rate_year) / 12 / 100
+var_top = float(loan_amount) * interest_rate_month
+var_power = float(number_years) * 12
+var_in_brackets = (1 + interest_rate_month) ** var_power
+
+monthly_payment = var_top / (1 - (1 / var_in_brackets))
+
+print("Monthly Payment is: ", monthly_payment)
+
+char_answer = str(input("Do you want to buy a new house Yes or NO: "))
+
+if char_answer.startswith('Y'):
+    annual_income = float(input("Enter the income: "))
+    current_mortgage = float(input("Enter the current mortgage: "))
+    new_number_years = float(input("Enter the new number of years: "))
+    new_house_price = float(input("Enter the new house amount: "))
+    down_payment_percentage = float(input("Enter the down payment percentage: "))
+
+    down_payment = new_house_price * down_payment_percentage
+    new_loan_amount = new_house_price - down_payment
+
+    new_interest_rate_year = input("New interest rate: ")
+    new_interest_rate_month = float(new_interest_rate_year) / 12 / 100
+
+    new_var_top = float(new_loan_amount) * new_interest_rate_month
+    new_var_power = float(new_number_years) * 12
+    new_var_in_brackets = (1 + new_interest_rate_month) ** new_var_power
+    new_monthly_payment = new_var_top / (1 - (1 / new_var_in_brackets))
+
+    total_monthly_debt = float(monthly_payment + new_monthly_payment)
+
+    monthly_income = float(annual_income / 12)
+
+    accept_dti = float(input("Enter the dti number: "))
+    dti_ratio = float(total_monthly_debt / monthly_income)
+
+    can_afford = bool(dti_ratio <= accept_dti)
+
+    print(f"Total Monthly Debt: ${total_monthly_debt:.2f}")
+    print(f"Debt-to-Income Ratio: {dti_ratio:.2%}")
+    print(f"Can Afford New House: {can_afford}")
+    exit()
+
+if char_answer.startswith('N'):
+    print("GOOD Buy")

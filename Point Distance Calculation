@@ -1,0 +1,17 @@
+import array
+import math
+
+x1 = float(input("Enter x1: "))
+x2 = float(input("Enter x2: "))
+y1 = float(input("Enter y1: "))
+y2 = float(input("Enter y2: "))
+
+point_1: array.array[x1, x2]
+point_2: array.array[y1, y2]
+first_bracket = (x2 - x1) ** 2
+second_bracket = (y2 - y1) ** 2
+sum_of_points = float((first_bracket + second_bracket))
+root_points = math.sqrt(sum_of_points)
+print(root_points)
+
+

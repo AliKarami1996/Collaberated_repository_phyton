@@ -13,7 +13,7 @@ print("Monthly Payment is: ", monthly_payment)
 
 char_answer = str(input("Do you want to buy a new house Yes or NO: "))
 
-if char_answer.startswith('Y'):
+if char_answer.startswith('Y' and 'y'):
     annual_income = float(input("Enter the income: "))
     current_mortgage = float(input("Enter the current mortgage: "))
     new_number_years = float(input("Enter the new number of years: "))
@@ -45,5 +45,5 @@ if char_answer.startswith('Y'):
     print(f"Can Afford New House: {can_afford}")
     exit()
 
-if char_answer.startswith('N'):
+if char_answer.startswith('N' and 'n'):
     print("GOOD Buy")

@@ -1,0 +1,62 @@
+income = float(input("What is your income: "))
+print("What is your status: ")
+print("1.Single")
+print("2.Married Filling Joint")
+print("3.Married Filling Separately")
+print("4.Household")
+print("Choose a number")
+status = float(input())
+
+match status:
+    case 1:
+        if income <= 8350:
+            print("Your Single and your tax rate is 10%")
+        if 8350 < income <= 33950:
+            print("Your Single and your tax rate is 15%")
+        if 33951 <= income <= 82250:
+            print("Your Single and your tax rate is 25%")
+        if 82251 <= income <= 171550:
+            print("Your Single and your tax rate is 28%")
+        if 171551 <= income <= 372950:
+            print("Your Single and your tax rate is 33%")
+        if income >= 372951:
+            print("Your Single and your tax rate is 35%")
+    case 2:
+        if income <= 16700:
+            print("Your Married and Filling Joint then your tax rate is 10%")
+        if 16700 < income <= 67900:
+            print("Your Married and Filling Joint then your tax rate is 15%")
+        if 67901 <= income <= 137050:
+            print("Your Married and Filling Joint then your tax rate is 25%")
+        if 137051 <= income <= 208850:
+            print("Your Married and Filling Joint then your tax rate is 28%")
+        if 208851 <= income <= 372950:
+            print("Your Married and Filling Joint then your tax rate is 33%")
+        if income >= 372951:
+            print("Your Married and Filling Joint then your tax rate is 35%")
+    case 3:
+        if income <= 8350:
+            print("Your Married and Filling Separately then your tax rate is 10%")
+        if 8351 < income <= 33950:
+            print("Your Married and Filling Separately then your tax rate is 15%")
+        if 33951 <= income <= 68525:
+            print("Your Married and Filling Separately then your tax rate is 25%")
+        if 68526 <= income <= 104425:
+            print("Your Married and Filling Separately then your tax rate is 28%")
+        if 104426 <= income <= 186475:
+            print("Your Married and Filling Separately then your tax rate is 33%")
+        if income >= 186476:
+            print("Your Married and Filling Separately then your tax rate is 35%")
+    case 4:
+        if income <= 11950:
+            print("Your Household then your tax rate is 10%")
+        if 11951 < income <= 45500:
+            print("Your Household then your tax rate is 15%")
+        if 45501 <= income <= 117450:
+            print("Your Household then your tax rate is 25%")
+        if 117451 <= income <= 190200:
+            print("Your Household then your tax rate is 28%")
+        if 190201 <= income <= 372950:
+            print("Your Household then your tax rate is 33%")
+        if income >= 372951:
+            print("Your Household then your tax rate is 35%")

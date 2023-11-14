@@ -1,0 +1,20 @@
+import random as rd
+
+input_number = str(input("Enter a number between 0 - 99: "))
+
+random_number = str(rd.randint(0 , 99))
+print (random_number)
+
+str_1 = input_number[0:1]
+str_2 = input_number[1:2]
+str_3 = random_number[0:1]
+str_4 = random_number[1:2]
+
+if str_1 == str_3 and str_2 == str_4:
+    print("You won 10,000$")
+
+if input_number == random_number:
+    print("You won 3,000$")
+
+if str_1 == str_3 or str_2 == str_4:
+    print("You won 1,000$")

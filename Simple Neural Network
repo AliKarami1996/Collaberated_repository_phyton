@@ -1,0 +1,44 @@
+import numpy as np
+
+# Values for our Input Block
+S
+input_1 = eval(input("Enter number 1: "))
+input_2 = eval(input("Enter number 2: "))
+
+# Putting the Values in out input block into an array
+
+input_data = np.array([input_1, input_2])
+
+# Asking user to input the weights for the output calculation
+
+print("Enter weights: ")
+'''input_weight_0 = eval(input("input_weight_0: "))
+#input_weight_1 = eval(input("input_weight_1: "))
+#input_weight_2 = eval(input("input_weight_2: "))
+#input_weight_3 = eval(input("input_weight_3: "))
+#output_weight_0 = eval(input("output_weight_0: "))
+#output_weight_1 = eval(input("output_weight_1: "))'''
+weights = {
+        'node_0': np.array([float(input("input_weight_0: ")), float(input("input_weight_1: "))]),
+        'node_1': np.array([float(input("input_weight_2: ")), float(input("input_weight_3: "))]),
+        'output': np.array([float(input("output_weight_0: ")), float(input("output_weight_1: "))])
+}
+
+# Calculation the Hidden layyer of our Network by doing Dot Product of the Input
+# and Weights
+
+node_0_value = (input_data * weights['node_0']).sum()
+node_1_value = (input_data * weights['node_1']).sum()
+
+# Putting our Hidden Layer Values into an Array
+
+hidden_layer_input = np.array([node_0_value, node_1_value])
+
+# Putting our Output Prediction into an Array and Applying the Activation Function
+
+output_data = (hidden_layer_input * weights['output']).sum()
+
+# Displaying our Result
+
+print(hidden_layer_input)
+print(output_data)

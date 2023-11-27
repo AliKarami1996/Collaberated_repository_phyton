@@ -1,17 +1,3 @@
-import array as ar
-'''name = str(input("Enter a word: "))
-
-for i in range(len(name)):
-
-    if name[i] == name[i - 1]:
-
-        print(name, "is a Palindrome")
-        i += 1
-
-    elif name[0] != name [-1]:
-        print(name, "is not a Palindrome")
-        break'''
-
 name = str(input("Enter a word: "))
 palindrome = True
 
@@ -28,4 +14,15 @@ elif not palindrome:
     print(name, "is not a palindrome")
 
 
+'''name = str(input("Enter a word: "))
 
+for i in range(len(name)):
+
+    if name[i] == name[i - 1]:
+
+        print(name, "is a Palindrome")
+        i += 1
+
+    elif name[0] != name [-1]:
+        print(name, "is not a Palindrome")
+        break'''

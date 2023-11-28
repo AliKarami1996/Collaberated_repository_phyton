@@ -1,0 +1,15 @@
+number = eval(input("Enter a number: "))
+is_prime = True
+
+for i in range(1, number):
+    is_prime = True
+
+    for k in range(2, i):
+        if i % k == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print(i, "This is a prime number")
+    else:
+        print(i, "This is not a prime number")

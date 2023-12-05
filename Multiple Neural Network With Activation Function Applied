@@ -4,7 +4,7 @@ import numpy as np
 # Getting two inputs from the user
 
 def relu(input_relu):
-    return np.maximum(0, input_relu)
+    return np.maximum(0, input_relu).astype(int)
 
 
 input_data = np.array([eval(input("Enter the first input: ")), eval(input("Enter the second input: "))])

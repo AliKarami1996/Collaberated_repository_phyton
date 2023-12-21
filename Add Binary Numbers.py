@@ -1,37 +1,3 @@
-"""
-Title: 67 – Add Binary
-Category: MATH
-Source: LeetCode
-Source Link: https://leetcode.com/problems/add-binary/
-
-Problem Statement:
-    Given two binary strings a and b, return their sum as a binary string.
-
-Constraints:
-    - 1 <= a.length, b.length <= 104
-    - a and b consist only of '0' or '1' characters.
-    - Each string does not contain leading zeros except for the zero itself.
-
-Example 1:
-    Input: a = "11", b = "1"
-    Output: "100"
-
-Example 2:
-    Input: a = "1010", b = "1011"
-    Output: "10101"
-
-Hints:
-    - Takes a binary number in form of string from input. Evaluates each string and converts to its decimal number.
-    - Sum up the decimal numbers.
-    - Convert the sum to its binary number in form of string.
-
-How it works?
-    - Take a string number from the user and inserting them into an list of
-    -
-    -
-"""
-
-
 class BinaryNumbers:
 
     def __init__(self, bin_1, bin_2):
